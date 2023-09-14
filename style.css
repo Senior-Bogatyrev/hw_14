@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: blanchedalmond;
+}
+.fullscreen:-webkit-full-screen {
+    width: auto !important;
+    height: auto !important;
+    margin:auto !important;
+}
+.btnCircle{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-left: 10px;
+    background-color: white;
+}
+.management{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin-left: 30px;
+    background-color: white;
+}
+#full{
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+}
+#imgContainer {
+    position: relative;
+    width: 800px;
+    height: 450px;
+}
+#imgContainer img {
+    width: 100%;
+    height: 100%;
+}
+#imgContainer #full {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+}
+#outContainer, #managementBtn, .circles {
+    display: flex;
+    justify-content: center;
+}
+#imgContainer, #managementBtn, .circles{
+    border: 1px solid black;
+}
+#innerContainer {
+    margin-top: 15px;
+    width: 800px;
+    height: 450px;
+}
+.circles, #managementBtn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#animation{
+    animation: scale 10s linear infinite;
+}
+@keyframes scale {
+    0% {
+        transform: scale(0);
+        border-radius: 50%;
+    }
+    10% {
+        transform: scale(1);
+        border-radius: 50%;
+    } 
+    15% {
+        border-radius: 0;
+    }    
+    49.99999% {
+        z-index: 1;
+    }   
+    50% {
+        z-index: -1;
+    }  
+    100% {
+        transform: scale(1);
+        z-index: -1;
+        border-radius: 0;
+    }  
+}
